@@ -1,0 +1,15 @@
+// inspired by https://github.com/bradgarropy/plop-generator-react-component/blob/master/src/templates/component.hbs
+import {FC} from 'react'
+
+
+interface Props = {}
+
+const {{pascalCase name}}: FC<Props> = () => {
+    return (
+        <button>
+            {{pascalCase name}}
+        </button>
+    )
+}
+
+export default {{pascalCase name}}
