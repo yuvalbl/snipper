@@ -1,5 +1,5 @@
 {
-  "name": "snipper",
+  "name": "snipper-test",
   "version": "0.1.0",
   "description": "A node.js codegen runner",
   "type": "module",
