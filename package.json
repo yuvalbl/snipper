@@ -1,19 +1,18 @@
 {
-  "name": "snipper-test",
-  "version": "0.1.0",
-  "description": "A node.js codegen runner",
-  "type": "module",
-  "bin": {
-    "snip": "./index.js"
-  },
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Yuval Bar Levi",
-  "license": "ISC",
-  "dependencies": {
-    "plop": "^3.0.5",
-    "react": "7"
-  }
+	"name": "snipper-test",
+	"version": "0.1.0",
+	"description": "A node.js codegen runner",
+	"type": "module",
+	"bin": {
+		"snip": "./index.js"
+	},
+	"scripts": {
+		"start": "node index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Yuval Bar Levi",
+	"license": "ISC",
+	"dependencies": {
+		"plop": "^3.0.5"
+	}
 }
