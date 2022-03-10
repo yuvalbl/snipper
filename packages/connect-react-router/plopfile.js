@@ -2,9 +2,6 @@ import fs from 'fs';
 import path from 'path';
 
 import { exec } from 'child_process';
-import minimist from 'minimist';
-
-// const PROJECT_ROOT = '../../';
 
 function execute(cmd) {
 	exec(cmd, (error, stdout, stderr) => {
@@ -32,24 +29,9 @@ function isPackageIncludeReact(checkPath) {
 }
 
 export default function (plop) {
-
-	const args = process.argv.slice(2);
-	const argv = minimist(args);
-	// if (argv.dev) {
-	// 	console.log('dev mode');
-	// 	dotenv.config({ path: `${PROJECT_ROOT}.env` });
-	// 	process.argv = process.argv.filter(arg => arg !== '--dev')
-	// console.log(process.argv);
-
-		console.log(process.env); // remove this after you've confirmed it working
-		// check if plop how to ignore passed args remove dev from process.argv?
-	// }
-
-	// const workDir = argv.dev ? `${PROJECT_ROOT}${process.env.CONNECT_REACT_ROUTER_DEV_PATH}` : process.cwd();
 	const workDir = process.env.DEV_MODE ? process.env.DEV_PATH : process.cwd();
-	console.log('========1111=======');
-	console.log('process.cwd():', process.cwd());
-	console.log('workdor:', workDir);
+	
+	console.log('workdir:', workDir);
 
 	if (!hasFile(workDir, 'package.json')) {
 		console.log(
@@ -57,8 +39,6 @@ export default function (plop) {
 		);
 		return;
 	}
-	console.log('===============');
-	console.log(argv.dev);
 
 	if (!isPackageIncludeReact(workDir)) {
 		console.log('Not a react project');
@@ -66,46 +46,18 @@ export default function (plop) {
 	}
 
 	const isTypeScript = hasFile(workDir, 'tsconfig.json');
-	// plop.setGenerator('react-button', {
-	// 	description: 'create a react button',
-	// 	prompts: [
-	// 		{
-	// 			type: 'input',
-	// 			name: 'name',
-	// 			message: 'controller name please',
-	// 		},
-	// 	],
-	// 	actions: [
-	// 		{
-	// 			type: 'add',
-	// 			path: 'src/{{name}}.js',
-	// 			templateFile: 'plop-templates/button.hbs',
-	// 		},
-	// 	],
-	// });
+	console.log(`Is typescript project? ${isTypeScript}`);
+
 	plop.setActionType('prettify', function (answers, config, plop) {
 		runPrettier(config.path);
 	});
 
 	plop.setGenerator('connect-react-router', {
-		description: 'create react-router-dom to a fresh create-react-app- project',
-		prompts: [
-			// {
-			// 	type: 'confirm',
-			// 	name: 'typescript',
-			// 	message: 'using typescript?',
-			// },
-		],
+		description: 'add react-router-dom to a fresh create-react-app- project',
 		actions: function (data) {
 			const actions = [];
-			let ext = isTypeScript ? 'tsx' : 'js';
-
-			// actions.push({
-			//     type: 'add',
-			//     path: `src/routes.const.${ext}`,
-			//     templateFile: `plop-templates/routes.${ext}.hbs`
-			// });
-			const reactIndexFile = `src/index.${ext}`;
+			const ext = isTypeScript ? 'tsx' : 'js';
+			const reactIndexFile = path.join(workDir, `src/index.${ext}`);
 
 			actions.push({
 				type: 'append',

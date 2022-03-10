@@ -69,6 +69,7 @@ It aim to leverage existing codegen/codemod engines, providing a unified api and
 
 #### To encourage developers to create generators:
 * Snipper should contain generators for creating generators
+* Snipper should provide self contain utils and services for generators (e.g. get project root, is node package etc.)
 * Snipper team should allow accepting PR from contributors, as long as they follow code, security and testing standards.
 * In the long term, creating a system which help create  and test generators may be helpful as well.
 

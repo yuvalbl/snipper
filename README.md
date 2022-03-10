@@ -2,46 +2,36 @@
 # Snipper
 ## A general purpose codegen runner
 
-Meet Snipper, a code gen runner.
+Meet Snipper, a general purpose code gen runner based on node.
 Snipper aim to provide an easy way to develop codegen/codemod ecosystem, making sharing  generator templates easy, and using generators easier
-
-
-For more about the problems snipper can solve for you, see [About](https://github.com/snipper/blob/About.md)
+For more about the problems snipper can solve for you, see [About](https://github.com/snipper/blob/ABOUT.md)
 
 ## Quick Overview <a name="available-scripts"></a>
 Snipper allow you to generate and modified code by a single command, no installation required.
 
-Foe example, running the following command will create a new react component
+For example, running the following command will create a new react component
 
+TBD
 ```
 
 ```
 
 
-### Generators
+### Development
+Run package locally:
+1. go to package directory
+1. `node .` (will automating run index.js)
+1. make sure to add additional required parameters
+
+### Development rules
+Package entry point ("main") should be index.js (or ts if you're using typescript)
 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Development scripts
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run sb`
-
-Run [storybook](https://storybook.js.org/docs/configurations/cli-options/#for-start-storybook) locally.
+### Lerna
+* [Repo](https://github.com/lerna/lerna) 
+* [Official doc](https://lerna.js.org/)

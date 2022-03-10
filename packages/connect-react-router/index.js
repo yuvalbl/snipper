@@ -6,22 +6,20 @@ import dotenv from 'dotenv';
 import minimist from 'minimist';
 import { Plop, run } from 'plop';
 
-console.log('========0000=======');
+// console.log('========0000=======');
 
 const appDir = dirname(fileURLToPath(import.meta.url));
 
 const args = process.argv.slice(2);
 const argv = minimist(args);
 
-
-console.log('888 exist: ' + process.cwd());
-console.log('9999 exist: ' + fs.existsSync('.env.local'));
+// console.log('888 exist: ' + process.cwd());
+// console.log('9999 exist: ' + fs.existsSync('.env.local'));
 
 if (fs.existsSync('.env.local')) {
 	dotenv.config({ path: '.env.local' });
 }
-// console.log('***');
-// console.log(argv.preload);
+
 Plop.prepare(
 	{
 		cwd: argv.cwd,
@@ -30,8 +28,8 @@ Plop.prepare(
 		completion: argv.completion,
 	},
 	(env) => {
-		console.log('***22222');
-		console.log(env);
+		// console.log('***22222');
+		// console.log(env);
 		return Plop.execute(env, (env) => {
 			const options = {
 				...env,
