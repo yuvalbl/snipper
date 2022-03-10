@@ -1,0 +1,12 @@
+{
+	"name": "@snipper/connect-react-router",
+	"version": "0.1.0",
+	"description": "react-router connector based on plop",
+	"type": "module",
+  "main": "index.js",
+	"author": "Yuval Bar Levi",
+	"license": "ISC",
+	"dependencies": {
+		"plop": "^3.0.5"
+	}
+}

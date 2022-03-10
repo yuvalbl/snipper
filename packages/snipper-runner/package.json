@@ -1,0 +1,25 @@
+{
+  "name": "snipper-test",
+  "version": "0.1.2",
+  "description": "A node.js codegen runner",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvalbl/snipper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuvalbl/snipper/issues"
+  },
+  "homepage": "https://github.com/yuvalbl/snipper#readme",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0"
+  }
+}
