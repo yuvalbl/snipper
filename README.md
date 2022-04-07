@@ -20,18 +20,19 @@ TBD
 ### Development
 Run package locally:
 1. go to package directory
-1. `node .` (will automating run index.js)
+1. `node .` (will automatically run index.js)
 1. make sure to add additional required parameters
 
 ### Development rules
-Package entry point ("main") should be index.js (or ts if you're using typescript)
+* Package entry point ("main") should be index.js (or ts if you're using typescript)
+* Package options can be overridden with `.env.local`, for making development easier
 
 
 ### Development scripts
 ```
-
+lerna create <name> // create a package
 ```
-
+lint-staged
 ### Lerna
 * [Repo](https://github.com/lerna/lerna) 
 * [Official doc](https://lerna.js.org/)

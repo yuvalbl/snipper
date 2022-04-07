@@ -1,0 +1,20 @@
+{
+  "name": "@snipper/add-huskyrc-nvm",
+  "version": "0.1.0",
+  "description": "add .huskyrc file for using husky with nvm",
+  "author": "yuvalbl <yuval.bar.levi@gmail.com>",
+  "homepage": "https://github.com/yuvalbl/snipper#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "type": "module",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvalbl/snipper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuvalbl/snipper/issues"
+  }
+}
